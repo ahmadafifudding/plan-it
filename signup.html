@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up | PLANIT</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .logo {
+      position: absolute;
+      top: 20px;
+      left: 30px;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .signup-box {
+      text-align: center;
+      width: 300px;
+    }
+
+    .signup-box h2 {
+      margin-bottom: 5px;
+    }
+
+    .signup-box p {
+      margin-bottom: 20px;
+      color: #555;
+    }
+
+    .signup-box input[type="email"],
+    .signup-box input[type="password"],
+    .signup-box input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 10px;
+      background-color: #dcd2f9;
+      color: #333;
+      transition: background-color 0.3s ease;
+    }
+
+    .signup-box input:focus,
+	.signup-box input:not(:placeholder-shown) {
+		background-color: #e7f0ff; /* Light blue */
+		outline: none;
+		border: none;
+	}
+
+    .signup-box input[type="submit"] {
+      background-color: #bda5dc;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .signup-box input[type="submit"]:hover {
+      background-color: #9e8bc7;
+    }
+
+    .password-wrapper {
+      position: relative;
+    }
+
+    .password-wrapper input {
+      width: 100%;
+      padding-right: 40px;
+    }
+
+    .toggle-password {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      cursor: pointer;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <img src="logo.png" alt="PLANIT Logo" style="width: 140px; margin-bottom: 30px;">
+    <div class="signup-box">
+      <h2>SIGN UP here!</h2>
+      <p>Please enter your details</p>
+      <form action="signup_process.php" method="post">
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+
+        <div class="password-wrapper">
+          <input type="password" id="password" name="password" placeholder="Password" required>
+          <i class="fas fa-eye toggle-password" onclick="togglePassword('password', this)"></i>
+        </div>
+
+        <div class="password-wrapper">
+          <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Password" required>
+          <i class="fas fa-eye toggle-password" onclick="togglePassword('confirm_password', this)"></i>
+        </div>
+
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function togglePassword(fieldId, icon) {
+      const input = document.getElementById(fieldId);
+      const type = input.getAttribute('type') === 'password' ? 'text' : 'password';
+      input.setAttribute('type', type);
+
+      icon.classList.toggle('fa-eye');
+      icon.classList.toggle('fa-eye-slash');
+    }
+  </script>
+</body>
+</html>
+

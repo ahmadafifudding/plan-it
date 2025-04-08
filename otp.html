@@ -1,0 +1,84 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>OTP Verification | PLANIT</title>
+  <style>
+    body {
+	font-family: Arial, sans-serif;
+	background-color: #fff;
+	margin: 0;
+	padding: 0;
+	}
+	.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	}
+	.logo {
+	position: absolute;
+	top: 20px;
+	left: 30px;
+	font-weight: bold;
+	font-size: 20px;
+	}
+	.otp-box {
+	text-align: enter;
+	width: 300px;
+	}
+	.otp-box h2 {
+	margin-bottom: 5px;
+	text-align: center;
+	}
+	.otp-box p {
+	margin-bottom: 20px;
+	text-align: center;
+	color: #555;
+	}
+	.otp-box input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 10px;
+      background-color: #dcd2f9;
+      color: #333;
+      text-align: center;
+    }
+
+    .otp-box input[type="text"]:focus {
+      background-color: #dcd2f9;
+      outline: none;
+      border: none;
+    }
+
+    .otp-box input[type="submit"] {
+      background-color: #bda5dc;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .otp-box input[type="submit"]:hover {
+      background-color: #9e8bc7;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">‘PLANIT LOGO’</div>
+    <div class="otp-box">
+      <h2>OTP Verification</h2>
+      <p>We have sent a 6-digit code to your email.<br>Please enter it below:</p>
+      <form action="otp_verify.php" method="post">
+        <input type="text" name="otp" placeholder="Enter OTP" required>
+        <input type="submit" value="Verify OTP">
+      </form>
+    </div>
+  </div>
+</body>
+</html>

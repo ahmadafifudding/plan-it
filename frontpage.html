@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PLANIT | Productivity Simplified</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fff;
+      color: #333;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background-color: #dcd2f9;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 40px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+    }
+
+    nav a {
+      margin: 0 12px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #7a5fc0;
+    }
+
+    .btn {
+      background-color: #bda5dc;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      margin-left: 10px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #9e8bc7;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 60px;
+      gap: 60px;
+    }
+
+    .text-content {
+      flex: 1;
+    }
+
+    .text-content h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+      color: #4b3a78;
+    }
+
+    .text-content p {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    .image-content {
+      flex: 1;
+    }
+
+    .image-content img {
+		max-width: 100%;
+		border-radius: 0;       
+		box-shadow: none;      
+	}
+
+    @media (max-width: 800px) {
+      .container {
+        flex-direction: column;
+        padding: 40px 20px;
+        text-align: center;
+      }
+
+      header {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 10px;
+      }
+
+      nav a, .btn {
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="PLANIT Logo" style="width: 120px;">
+    </div>
+    <nav>
+      <a href="signup.html" class="btn">Sign Up</a>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <div class="container">
+    <div class="text-content">
+      <h1>Clarity, finally.</h1>
+      <p>Join thousands who simplify their work and life with PLANIT – the easiest planning platform.</p>
+      <a href="index.html" class="btn">Log In</a>
+    </div>
+
+    <div class="image-content">
+      <img src="header.png" alt="Dashboard Preview">
+    </div>
+  </div>
+
+</body>
+</html>

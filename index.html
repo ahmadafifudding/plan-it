@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Log In | PLANIT</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .logo {
+      position: absolute;
+      top: 20px;
+      left: 30px;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .login-box {
+      text-align: center;
+      width: 300px;
+    }
+
+    .login-box h2 {
+      margin-bottom: 5px;
+    }
+
+    .login-box p {
+      margin-bottom: 20px;
+      color: #555;
+    }
+
+    .login-box input[type="email"],
+    .login-box input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 10px;
+      background-color: #dcd2f9;
+      color: #333;
+      padding-right: 40px;
+      box-sizing: border-box;
+    }
+
+    .password-wrapper {
+      position: relative;
+    }
+
+    .password-wrapper .toggle-password {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      cursor: pointer;
+      color: #555;
+    }
+
+    .action-btn {
+      background-color: #bda5dc;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 10px;
+      width: 100%;
+      display: block;
+      box-sizing: border-box;
+      font-size: 14px;
+    }
+
+    .action-btn:hover {
+      background-color: #9e8bc7;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <img src="logo.png" alt="PLANIT Logo" style="width: 140px; margin-bottom: 30px;">
+    <div class="login-box">
+      <h2>Hello There!</h2>
+      <p>Please enter your details</p>
+      <form action="login_process.php" method="post">
+        <input type="email" name="email" placeholder="Email Address" required>
+
+        <div class="password-wrapper">
+          <input type="password" id="password" name="password" placeholder="Password" required>
+          <i class="fas fa-eye toggle-password" onclick="togglePassword('password', this)"></i>
+        </div>
+
+        <!-- Log In Button -->
+        <button type="submit" class="action-btn">Log In</button>
+
+        <!-- Sign Up Button -->
+        <button type="button" class="action-btn" onclick="window.location.href='signup.html'">Sign Up</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function togglePassword(fieldId, icon) {
+      const input = document.getElementById(fieldId);
+      const type = input.getAttribute('type') === 'password' ? 'text' : 'password';
+      input.setAttribute('type', type);
+
+      icon.classList.toggle('fa-eye');
+      icon.classList.toggle('fa-eye-slash');
+    }
+  </script>
+
+</body>
+</html>
