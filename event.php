@@ -197,7 +197,7 @@ $username = $_SESSION['username'];
     <h2>Event</h2>
 
     <?php
-    $conn = new mysqli("localhost", "root", "", "plan_it");
+    $conn = new mysqli("d1kb8x1fu8rhcnej.cbetxkdyhwsb.us-east-1.rds.amazonaws.com", "bylsqji766ehgrks", "bcqsrbxha0fvrzyu", "uz0n9ksy9lf4al5t");
 
     if ($conn->connect_error) {
       echo "<p style='color: red;'>Connection failed: " . $conn->connect_error . "</p>";

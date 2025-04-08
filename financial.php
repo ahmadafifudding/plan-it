@@ -207,7 +207,7 @@ $username = $_SESSION['username'];
       </thead>
       <tbody>
         <?php
-        $conn = new mysqli("localhost", "root", "", "plan_it");
+        $conn = new mysqli("d1kb8x1fu8rhcnej.cbetxkdyhwsb.us-east-1.rds.amazonaws.com", "bylsqji766ehgrks", "bcqsrbxha0fvrzyu", "uz0n9ksy9lf4al5t");
 
         $query = "
           SELECT 
