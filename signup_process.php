@@ -2,10 +2,10 @@
 session_start();
 require 'otp_mailer.php';
 
-$host = "localhost";
-$dbname = "plan_it";
-$username = "root";
-$password = "";
+$host = "d1kb8x1fu8rhcnej.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
+$dbname = "uz0n9ksy9lf4al5t";
+$username = "bylsqji766ehgrks";
+$password = "bcqsrbxha0fvrzyu";
 
 $conn = new mysqli($host, $username, $password, $dbname);
 

@@ -2,6 +2,6 @@
 session_start();
 session_unset();
 session_destroy();
-header("Location: index.html"); // or index.html
+header("Location: login.html"); // or login.html
 exit();
 ?>
